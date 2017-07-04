@@ -11,9 +11,9 @@ before_install:
   - sleep 5
   - sudo docker pull davidva/unibuild
 script:
-# ENABLE tne next line and delete add a "#" the next lines; if you want build with mock
+# ENABLE tne nex line and delete add a "#" the nex lines; if you want build with mock
 #- travis_wait 40 docker run --cap-add=SYS_ADMIN davidva/unibuild /bin/sh /urpms -g UnitedRPMs/spotify -s spotify.spec -t fedora-25-x86_64
-- "docker run -v $(pwd):/root/enjoy --cap-add=SYS_ADMIN davidva/unibuild /bin/sh /urpms -g UnitedRPMs/i-next -s i-next.spec -r true -d 'dist .fc25'"
+- "docker run -v $(pwd):/root/enjoy --cap-add=SYS_ADMIN davidva/unibuild /bin/sh /urpms -g UnitedRPMs/i-nex -s i-nex.spec -r true -d 'dist .fc25'"
 notifications:
   webhooks:
     urls:
