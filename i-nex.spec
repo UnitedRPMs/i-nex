@@ -93,7 +93,7 @@ version, Xorg, GCC, GLX versions and Linux Kernel info.
 
 %prep
 
-%autosetup -n %{name}-%{commit0}
+%autosetup -n I-Nex-%{commit0}
 # sed -i 's|python3$|python2|' pastebinit
   # make it dynamic
   sed -i -e 's|^STATIC.*|STATIC = false|' i-nex.mk
