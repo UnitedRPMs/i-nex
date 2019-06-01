@@ -3,5 +3,6 @@ BUILDROOT/*
 RPMS/*
 SPECS/*
 SRPMS/*
-i-nex*.tar.xz
+*.tar.xz
 .directory
+*.rpm
