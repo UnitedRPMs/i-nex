@@ -2,24 +2,24 @@
 %global debug_package %{nil}
 %global __os_install_post /usr/lib/rpm/brp-compress %{nil}
 
-%global gitdate 20170703
-%global commit0 0c10102578e7c762674eaf9460b0903d76f151db
+%global gitdate 20191213
+%global commit0 cd1b78d588af620cfd1547bc57cfa7fa1112252b
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 
-Name:          	i-nex
-Version:       	7.6.0
-Release: 	3%{?gver}%{dist}
-Summary:      	System information tool like hardinfo, sysinfo
-Source0: 	https://github.com/i-nex/I-Nex/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
-Source3:	i-nex.desktop
-URL:           	https://github.com/eloaders/I-Nex
-Group:        	System/X11/Utilities
-License:        GPLv3, LGPLv3
-BuildRoot:     	%{_tmppath}/build-%{name}-%{version}
+Name: i-nex
+Version: 7.6.1
+Release: 1%{?gver}%{dist}
+Summary: System information tool like hardinfo, sysinfo
+Source0: https://github.com/i-nex/I-Nex/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
+Source3: i-nex.desktop
+URL: https://github.com/eloaders/I-Nex
+Group: System/X11/Utilities
+License: GPLv3, LGPLv3
+BuildRoot: %{_tmppath}/build-%{name}-%{version}
  
-BuildRequires: 	gambas3-devel 
+BuildRequires:  gambas3-devel 
 BuildRequires:  ImageMagick 
 BuildRequires:  ImageMagick-devel 
 BuildRequires:  git	
@@ -155,6 +155,9 @@ rm -rf %{buildroot}%{_datadir}/%{name}/pastebinit
 %{_datadir}/pixmaps/i-nex.png
 
 %changelog
+
+* Fri Dec 13 2019 David Vasquez <davidjeremias82 at gmail dot com> - 7.6.1-1.gitcd1b78d
+- Updated to 7.6.1
 
 * Sat Jun 01 2019 David Vasquez <davidjeremias82 at gmail dot com> - 7.6.0-3.git0c10102
 - Rebuilt for libcpuid
