@@ -10,7 +10,7 @@
 
 Name: i-nex
 Version: 7.6.1
-Release: 1%{?gver}%{dist}
+Release: 2%{?gver}%{dist}
 Summary: System information tool like hardinfo, sysinfo
 Source0: https://github.com/i-nex/I-Nex/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 Source3: i-nex.desktop
@@ -39,7 +39,7 @@ BuildRequires:  gambas3-gb-qt5-ext >= 3.5.0
 BuildRequires:	gambas3-gb-settings
 BuildRequires:  hicolor-icon-theme 
 BuildRequires:  pkgconfig
-BuildRequires:  libcpuid-devel >= 0.4.1
+BuildRequires:  libcpuid-devel >= 0.5.0
 BuildRequires:  pkgconfig(libprocps)
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(gl)
@@ -155,6 +155,9 @@ rm -rf %{buildroot}%{_datadir}/%{name}/pastebinit
 %{_datadir}/pixmaps/i-nex.png
 
 %changelog
+
+* Wed May 27 2020 David Vasquez <davidjeremias82 at gmail dot com> - 7.6.1-2.gitcd1b78d
+- Rebuilt for libcpuid
 
 * Fri Dec 13 2019 David Vasquez <davidjeremias82 at gmail dot com> - 7.6.1-1.gitcd1b78d
 - Updated to 7.6.1
